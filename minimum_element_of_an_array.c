@@ -1,20 +1,20 @@
 #include<stdio.h>
 int main()
 {
-    int i,n,min;
+    int i,n,max;
     scanf("%d",&n);
     int a[n];
     for(i=0;i<n;i++)
     {
         scanf("%d",&a[i]);
     }
-    min=a[0];
+    max=a[0];
     for(i=0;i<n;i++)
     {
-        if(min>a[i])
+        if(max>a[i])
         {
-            min=a[i];
+            max=a[i];
         }
     }
-    printf("%d",min);
+    printf("%d",max);
 }
