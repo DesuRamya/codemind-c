@@ -1,16 +1,17 @@
+
 #include<stdio.h>
 int main()
 {
-    int n,a=0,b=0;
+    int n,i=0,r=0;
     scanf("%d",&n);
     while(n>0)
     {
-        a=n%10;
-        if(a>b)
+        r=n%10;
+        if(r>i)
         {
-            b=a;
+            i=r;
         }
         n=n/10;
     }
-    printf("%d",b);
-}
+    printf("%d",i);
+}//largest digit 6--2 adv
