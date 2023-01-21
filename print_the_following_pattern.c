@@ -1,15 +1,26 @@
 #include<stdio.h>
 int main()
 {
-    int i,j,n;
+    int i,n,j;
     scanf("%d",&n);
-    for(i=n;i>=1;i--)
+    for(i=0;i<n;i++)
     {
-        for(j=i;j>=1;j--)
+        for(j=0;j<n;j++)
         {
-            printf("%c ",i+64);
+            if(i==j) // && j==n-i-1)
+            {
+                printf("x");
+            }
+            else if((j+1)==(n-i))
+            {
+                printf("x");
+            }
+            else
+            {
+                printf("0");
+            }
         }
         printf("
 ");
     }
-}//patterns new 4 4
+}
