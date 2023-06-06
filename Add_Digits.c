@@ -1,19 +1,20 @@
 #include<stdio.h>
-#include<math.h>
+int sum(int n)
+{
+    int i,s=0,r;
+    while(n!=0)
+    {
+        r=n%10;
+        n=n/10;
+        s=s+r;
+    }
+    return s;
+}
 int main()
 {
-    int n,r,sum;
+    int i,n,s;
     scanf("%d",&n);
-    while(n/10!=0)
-    {
-        sum=0;
-        while(n!=0)
-        {
-            r=n%10;
-            sum=sum+r;
-            n=n/10;
-        }
-        n=sum;
-    }
-    printf("%d",sum);
+    while(n>9)
+    n=sum(n);
+    printf("%d",n);
 }
