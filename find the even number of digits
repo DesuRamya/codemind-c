@@ -1,0 +1,30 @@
+# codemind-c
+#include<stdio.h>
+int fun(int n)
+{
+    int s=0,r;
+    while(n!=0)
+    {
+        r=n%10;
+        s=s+1;
+        n=n/10;
+    }
+    if (s%2==0)
+    return 1;
+    else
+    return 0;
+}
+int main()
+{
+    int n,a[100],i,c;
+    scanf("%d",&n);
+    for (i=0;i<n;i++)
+    {
+        scanf("%d",&a[i]);
+        if (fun(a[i]))
+        {
+            c=c+1;
+        }
+    }
+    printf("%d",c);
+}
