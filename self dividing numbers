@@ -1,0 +1,23 @@
+# codemind-c
+#include<stdio.h>
+int main()
+{
+    int i,n,m,s,t;
+    scanf("%d%d",&n,&m);
+    for (i=n;i<=m;i++)
+    {
+        t=i;
+        int c=0;
+        int r=0;
+        while(t!=0)
+        {
+            c=c+1;
+            s=t%10;
+            if (s!=0 && i%s==0)
+            r=r+1;
+        t=t/10;
+        }
+        if (r==c)
+        printf("%d ",i);
+    }
+}
