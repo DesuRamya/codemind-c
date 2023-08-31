@@ -1,0 +1,28 @@
+# codemind-c
+#include<stdio.h>
+int main()
+{
+    int n,s=0,r,re=0,x,d=0;
+    scanf("%d",&n);
+    while(n!=0)
+    {
+        r=n%10;
+        n=n/10;
+        s=s*10+r;
+    }
+    while(s!=0)
+    {
+        x=s%10;
+        s=s/10;
+        if (d<1)
+        {
+            if (x==6)
+            {
+                x=9;
+                d=1;
+            }
+        }
+        re=re*10+x;
+    }
+    printf("%d",re);
+}
