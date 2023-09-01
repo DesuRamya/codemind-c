@@ -1,0 +1,26 @@
+# codemind-c
+#include<stdio.h>
+int fact(int n)
+{
+    if (n==0||n==1)
+    return 1;
+    else
+    return n*fact(n-1);
+}
+int main()
+{
+    int n,s,su=0,r;
+    scanf("%d",&n);
+    int t=n;
+    while(n)
+    {
+        r=n%10;
+        n=n/10;
+        s=fact(r);
+        su=su+s;
+    }
+    if (t==su)
+    printf("The number %d is a strong number",t);
+    else
+    printf("The number %d is not a strong number",t);
+}
