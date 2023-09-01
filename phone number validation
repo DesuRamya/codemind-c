@@ -1,0 +1,17 @@
+# codemind-c
+#include<stdio.h>
+int main()
+{
+    long long int n;
+    int c=0;
+    scanf("%lld",&n);
+    while(n>0)
+    {
+        c=c+1;
+        n=n/10;
+    }
+    if (c==10)
+    printf("Valid");
+    else
+    printf("Invalid");
+}
