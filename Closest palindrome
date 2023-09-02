@@ -1,0 +1,45 @@
+# codemind-c
+#include<stdio.h>
+int ispalin(int n)
+{
+    int s=0,r,t=n;
+    while(n!=0)
+    {
+        r=n%10;
+        s=s*10+r;
+        n=n/10;
+    }
+    if (s==t)
+    return 1;
+    else
+    return 0;
+}
+int main()
+{
+    int n,i,r1,r2,a1,a2;
+    scanf("%d",&n);
+    for (i=n-1;i>0;i--)
+    {
+        if (ispalin(i))
+        {
+        r1=i;
+        break;
+        }
+    }
+    for(i=n+1;i<2000000;i++)
+    {
+        if (ispalin(i))
+        {
+        r2=i;
+        break;
+        }
+    }
+    a1=n-r1;
+    a2=r2-n;
+    if (a1>a2)
+    printf("%d",r2);
+    else if (a1<a2)
+    printf("%d",r1);
+    else
+    printf("%d %d",r1,r2);
+}
