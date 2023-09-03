@@ -1,0 +1,26 @@
+# codemind-c
+#include<stdio.h>
+int fun(int *a,int n)
+{
+    int i;
+    for (i=0;i<n;i++)
+    {
+        if (a[i]!=1 && a[i]!=0)
+        return 0;
+    }
+    return 1;
+}
+int main()
+{
+    int i,n,a[100];
+    scanf("%d",&n);
+    for(i=0;i<n;i++)
+    {
+        scanf("%d",&a[i]);
+    }
+    int r=fun(a,n);
+    if (r==0)
+    printf("False");
+    else
+    printf("True");
+}
