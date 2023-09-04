@@ -1,0 +1,24 @@
+# codemind-c
+#include<stdio.h>
+int power(int n,int x)
+{
+    int r=1,i;
+    for (i=1;i<=x;++i)
+    {
+        r=n*r;
+    }
+    return r;
+}
+int main()
+{
+    int n,x=0,s=0,r;
+    scanf("%d",&n);
+    while(n!=0)
+    {
+        r=n%10;
+        s=s+r*power(8,x);
+        n=n/10;
+        x++;
+    }
+    printf("%d",s);
+}
