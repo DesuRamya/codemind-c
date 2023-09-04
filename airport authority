@@ -1,0 +1,21 @@
+# codemind-c
+#include<stdio.h>
+int main()
+{
+    int n,a[100],t,i;
+    scanf("%d",&n);
+    for (i=0;i<n;i++)
+    {
+        scanf("%d",&a[i]);
+    }
+    scanf("%d",&t);
+    int c=0;
+    for (i=0;i<n;i++)
+    {
+        if (a[i]<=t)
+        c=c+1;
+        else
+        c=c+2;
+    }
+    printf("%d",c);
+}
