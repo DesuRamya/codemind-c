@@ -1,0 +1,41 @@
+# codemind-c#include<stdio.h>
+int isprime(int n)
+{
+    int c=0,i;
+    for(i=1;i<=n;i++)
+    {
+        if (n%i==0)
+        c++;
+    }
+    if (c==2)
+    return 1;
+    else
+    return 0;
+}
+int main()
+{
+    int i,n,j,mi,ma;
+    scanf("%d",&n);
+    for (i=n;;i++)
+    {
+        if (isprime(i))
+        {
+            ma=i;
+            break;
+        }
+    }
+    for (j=n;;j--)
+    {
+        if (isprime(j))
+        {
+            mi=j;
+            break;
+        }
+    }
+    int d1=n-mi;
+    int d2=ma-n;
+    if (d1<=d2)
+    printf("%d",d1);
+    else
+    printf("%d",d2);
+}
