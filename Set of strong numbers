@@ -1,0 +1,34 @@
+# codemind-c
+#include<stdio.h>
+int fact(int n)
+{
+    if (n==0||n==1)
+    return 1;
+    else
+    return n*fact(n-1);
+}
+void Strong(int n)
+{
+    int t=n,su=0,r,s=0;
+    while(n)
+    {
+        r=n%10;
+        n=n/10;
+        s=fact(r);
+        su=su+s;
+    }
+    if (t==su)
+    printf("Strong\n");
+    else
+    printf("Not Strong\n");
+}
+int main()
+{
+    int n,i,a[100];
+    scanf("%d",&n);
+    for(i=0;i<n;i++)
+    {
+        scanf("%d",&a[i]);
+        Strong(a[i]);
+    }
+}
