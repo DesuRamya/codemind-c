@@ -1,0 +1,24 @@
+# codemind-c
+#include<stdio.h>
+int main()
+{
+    int i,n,a,b,an;
+    scanf("%d",&n);
+    while(n--)
+    {
+        scanf("%d%d",&a,&b);
+        an=0;
+        for (i=0;i<b;i++)
+        {
+            long int t=(long int)i*i;
+            if (t%b==a)
+            {
+                printf("%d\n",i);
+                an=1;
+                break;
+            }
+        }
+        if (an==0)
+    printf("-1\n");
+    }
+}
