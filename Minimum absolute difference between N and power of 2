@@ -1,0 +1,25 @@
+# codemind-c
+#include<stdio.h>
+int power(int n,int x)
+{
+    int r=1,i;
+    for (i=1;i<=x;++i)
+    {
+        r=n*r;
+    }
+    return r;
+}
+int main()
+{
+    int d,n,i=0;
+    scanf("%d",&n);
+    while(power(2,i)<n)
+    {
+        i++;
+    }
+    if (power(2,i)-n>n-power(2,i-1))
+    d=n-power(2,i-1);
+    else
+    d=power(2,i)-n;
+    printf("%d",d);
+}
